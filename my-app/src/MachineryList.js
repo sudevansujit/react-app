@@ -1,11 +1,43 @@
 import React from 'react';
 import MachinerySpace from './MachinerySpace';
 import './MachineryList.css'
-
+import data from './sfpopos-data.json'
+ 
 function MachineryList() {
+    // const titles = data.map((obj) => {
+    //     return obj.title
+    //     })
+
+    // console.log(titles) 
+    
+    // another way of writing similar code
+    // const titles = data.map((obj) => {
+    //     return <h4>{obj.title}</h4>
+    //   })
+
+    // console.log(titles)
+
+    const spaces = data.map(({ title, address, images, hours }) => {
+        
+        //Deconstruction
+         
+
+        return (
+          <MachinerySpace
+            key={title}
+            name={title}
+            address={address}
+            image={images[0]}
+            hours = {hours}
+          />
+        )
+      })
+    
+ 
   return (
     <div className="MachineryList">
-      <MachinerySpace
+        {spaces} 
+      {/* <MachinerySpace
         name="100-pine"
         address="100-pine"
         image="100-pine.jpg"
@@ -32,8 +64,11 @@ function MachineryList() {
       <MachinerySpace 
         name="citigroup-center"
         address="citigroup-center"
-        image="citigroup-center.jpg"/>
-    </div>
+        image="citigroup-center.jpg"/> */}
+</div>
+
+   
+    
   )
 }
 

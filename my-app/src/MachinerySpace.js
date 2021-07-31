@@ -3,7 +3,7 @@ import logo from './Assets/logo.gif'
 import './MachinerySpace.css';
 
 function MachinerySpace(props) {
-  const { name, image, address } = props
+  const { name, image, address, hours } = props
 
 
 
@@ -22,6 +22,7 @@ function MachinerySpace(props) {
       
       
       <div>{props.address}</div>
+      <div>{props.hours}</div>
        
     </div>
   )
