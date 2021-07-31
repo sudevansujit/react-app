@@ -1,5 +1,6 @@
 import React from 'react' 
 import logo from './Assets/logo.gif'
+import './MachinerySpace.css';
 
 function MachinerySpace(props) {
   const { name, image, address } = props
@@ -10,16 +11,18 @@ function MachinerySpace(props) {
 
 
   return (
-    <div>
+    <div className = 'MachinerySpace'>
+        <h1>{props.name}</h1>
       {/* <img src={logo} width="300" height="300" alt="Hello" /> */}
-      <img src={`${process.env.PUBLIC_URL}images/50-california-st.jpg` }     
+      <img src={`${process.env.PUBLIC_URL}images/${props.image}` }     
         width="300"
         height="300"
         alt="50 Califonia St."
       />
       
-      <h1>{props.name}</h1>
-      <div>Address...</div>
+      
+      <div>{props.address}</div>
+       
     </div>
   )
 }

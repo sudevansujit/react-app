@@ -1,5 +1,6 @@
 import React from 'react';
 import MachinerySpace from './MachinerySpace';
+import './MachineryList.css'
 
 function MachineryList() {
   return (
@@ -8,11 +9,14 @@ function MachineryList() {
         name="100-pine"
         address="100-pine"
         image="100-pine.jpg"
+         
       />
       <MachinerySpace 
         name="101-california"
         address="101-california"
-        image="101-california.jpg"/>
+        image="101-california.jpg"
+         
+        />
       <MachinerySpace 
         name="525-market-street-plaza"
         address="525-market-street-plaza"
