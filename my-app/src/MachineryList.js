@@ -17,13 +17,14 @@ function MachineryList() {
 
     // console.log(titles)
 
-    const spaces = data.map(({ title, address, images, hours }) => {
+    const spaces = data.map(({ title, address, images, hours }, i ) => {
         
         //Deconstruction
          
 
         return (
           <MachinerySpace
+            id = {i}          // added new prop id here!
             key={title}
             name={title}
             address={address}
